@@ -1,25 +1,14 @@
 import telebot
-import cgi
-import html
 from pyowm import OWM
 from http.server import HTTPServer, CGIHTTPRequestHandler
 
 # from pyowm.utils import config
 # from pyowm.utils import timestamps
 
-form = cgi.FieldStorage()
-text1 = form.getfirst("TEXT_1", "не задано")
-text1 = html.escape(text1)
-
 owm = OWM('6d00d1d4e704068d70191bad2673e0cc')
 mgr = owm.weather_manager()
 
 bot = telebot.TeleBot("5186477446:AAEi6Ht91BnXA4qp2mtwO4Dv5htPjQKgDPc", parse_mode=None)
-bot.send_message(805818310, text1)
-
-server_address = ("", 8000)
-httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
-
 
 # You can set parse_mode by default. HTML or MARKDOWN
 
