@@ -21,9 +21,7 @@ def send_welcome(message):
         city = message.text.lower().replace("/wdfrbot", "").strip()
         observation = mgr.weather_at_place(city)
         w = observation.weather
-        bot.send_message(message.chat.id, f"Температура {city.title()} {w.temperature('celsius')['temp']}"
-                                          f"\n чувствуется как {w.temperature('celsius')['feels_like']}"
-                                          f"\n ещё {w.detailed_status}")
+        bot.send_message(message.chat.id, w.temperature('celsius')['feels_like'])
 
     except:
         bot.send_message(message.chat.id, "Не знаю такого города")
