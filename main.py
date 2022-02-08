@@ -1,6 +1,6 @@
 import telebot
 from pyowm import OWM
-from http.server import HTTPServer, CGIHTTPRequestHandler
+
 
 # from pyowm.utils import config
 # from pyowm.utils import timestamps
