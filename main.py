@@ -32,6 +32,5 @@ def send_welcome(message):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-    httpd.serve_forever()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
